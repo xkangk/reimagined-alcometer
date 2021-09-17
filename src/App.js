@@ -15,19 +15,20 @@ function App() {
   const grams = liters * 8 * 4.5;
   const burning = weight /10;
   const left = grams - (burning * time);
-
 let result = 0;
-if (result < 0) {
-  return setResult(result);
-}
-    else if (gender ==="male") {
+
+
+    if (gender ==="male") {
       result = (left / (0.7 * weight));
-    } else {
+    } else{
       result = (left / (0.6 * weight));
-    }
+      
+    }if (result < 0) {
+      return setResult(result=0);
+    } else {
     setResult(result.toFixed(2));
   }
-
+}
   return (
 
 
@@ -40,10 +41,12 @@ if (result < 0) {
       </div>
       <div> 
         <label>Bottles: </label>
-        <select value={bottles}
+     {/*    <input name="bottles" type="number" step="1" value={bottles} onChange={e => setBottles(e.target.value)}></input> */}
+
+      <select value={bottles}
  onChange={e=>setBottles(e.target.value)} >
 <FillOptions />
- </select>
+ </select> 
       </div>
       <div> 
         <label>Time: </label>
