@@ -22,7 +22,7 @@ let result = 0;
       result = (left / (0.7 * weight));
     } else{
       result = (left / (0.6 * weight));
-      
+
     }if (result < 0) {
       return setResult(result=0);
     } else {
@@ -41,7 +41,6 @@ let result = 0;
       </div>
       <div> 
         <label>Bottles: </label>
-     {/*    <input name="bottles" type="number" step="1" value={bottles} onChange={e => setBottles(e.target.value)}></input> */}
 
       <select value={bottles}
  onChange={e=>setBottles(e.target.value)} >
